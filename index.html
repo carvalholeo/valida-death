@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button id="meu-botao">Botão</button>
+
+
+    <form onsubmit="">
+        Nome: <input type="text" name="nome" id="nome">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+
+        window.addEventListener('load', () => {
+            console.log('Carregado');
+
+            let formulario = document.querySelector('form');
+            let input = document.querySelector('#nome');
+
+            formulario.addEventListener('submit', event => {
+                event.preventDefault();
+                console.log('Previnido');
+            });
+
+            input.addEventListener('focus', () => {
+                console.log('Entrou no input');
+            });
+
+            input.addEventListener('keyup', () => {
+                console.log('Tecla levantada');
+            });
+        })
+        
+    </script>
+</body>
+</html>
